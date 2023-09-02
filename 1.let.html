@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    let:
+      1.变量不能重复声明
+      2.块级作用域
+      3.变量也会提升，但是会有一个暂存死区，不能读取
+      4.不影响作用域链
+   -->
+  <script>
+    // 声明变量
+    let a,b;
+    let c = 100;
+    // let c = 10;
+    // 包括了含有{} 的 if else for等
+    {
+      let girl = "周洋亲";
+    }
+    // console.log(girl);
+    {
+      let a = "zz";
+      function fn(){
+        console.log(a);
+      }
+      fn();
+    }
+  </script>
+</body>
+</html>

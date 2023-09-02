@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function * gen(arg){
+      console.log(arg);
+      let one = yield 111;
+      console.log(one);
+      let senond = yield 222;
+      console.log(senond);
+      yield 333;
+    }
+    let a = gen("AAA");
+    console.log(a.next());
+    // next方法可以传入实参
+    console.log(a.next("BBB"));
+    console.log(a.next("ccc"));
+    // console.log(a.next());
+  </script>
+</body>
+</html>

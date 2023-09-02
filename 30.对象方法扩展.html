@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Object.is判断两个值是否完全相等
+    console.log(Object.is(120,120));
+    // Object.assigon 对象的合并,可以浅拷贝
+    const config = {
+      name:'123'
+    }
+    const config2 = {
+      name:"1234",
+      age:18
+    }
+    console.log(Object.assign(config,config2));
+    
+    // Object.setPrototypeOf 设置原型对象
+    const school  = {
+      name:'zz'
+    }
+    const cities = {
+      city:['北京','宁波']
+    }
+    Object.setPrototypeOf(school,cities);
+    console.log(school);
+  </script>
+</body>
+</html>

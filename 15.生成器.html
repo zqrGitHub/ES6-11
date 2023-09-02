@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 生成器就是一个特殊的函数
+    // 异步编程  以前是纯回调函数
+    // yield算作函数代码的分隔符,将以下函数分为3块
+    function * gen(){
+      // console.log('111');
+      yield "一只没有耳朵";
+      // console.log('222');
+      yield "一只没有眼睛";
+      // console.log('3333');
+    }
+    let aaa = gen();
+    // console.log(aaa);
+    aaa.next();
+    aaa.next();
+    aaa.next();
+
+    // 遍历
+    for (const iterator of gen()) {
+      console.log(iterator);
+    }
+  </script>
+</body>
+</html>

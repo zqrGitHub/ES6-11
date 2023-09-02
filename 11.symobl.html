@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    1.不能运算
+    2.Symbol的值是唯一的
+    3.Symbol定义的对象属性不能for..in遍历,但可以使用Reflect.ownKeys来获取对象的所有键名
+   -->
+  <script>
+    // 创建方式
+    let s = Symbol();
+    let s1 = Symbol("zz");
+    let s3 = Symbol.for("zz");
+  </script>
+</body>
+</html>

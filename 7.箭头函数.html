@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    1.this是静态的，this始终指向函数声明时所在作用域下的this
+    2.不能作为构造函数实例化对象
+    3.不能使用arguments变量
+    4.箭头函数的简写(省略小括号当形参只有一个) 
+        -当代码体只有一条return语句
+        -返回对象({})
+   -->
+  <script>
+    let fn = (a,b)=>{
+      return a+b;
+    }
+    let add = n => n+n;
+    console.log(add(3));
+  </script>
+</body>
+</html>
